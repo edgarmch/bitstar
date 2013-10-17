@@ -11,7 +11,7 @@ fs.readFile('index.html', function (err, data) {
 
 
 app.get('/', function(request, response) {
-  response.send(a);
+  response.send(ar);
 });
 
 
