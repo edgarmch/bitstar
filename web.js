@@ -1,18 +1,17 @@
 var express = require('express');
 
-var app = express.createServer(express.logger());
+var app = express(express.logger());
 
-var fs = require("fs");
-var outfile = "index.html";
-var out ="";
+var fs = require('fs');
 
-
-}
-
+fs.readFile('index.html', function (err, data) {
+  if (err) throw err;
+  var ar = data;
+});
 
 
 app.get('/', function(request, response) {
-  response.send(fs.writeFileSync(outfile, out));
+  response.send("a");
 });
 
 
