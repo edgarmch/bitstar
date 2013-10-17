@@ -2,8 +2,17 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-app.get('/index', function(request, response) {
-  response.send("Necio");
+var fs = require("fs");
+var outfile = "index.html";
+var out ="";
+
+
+}
+
+
+
+app.get('/', function(request, response) {
+  response.send(fs.writeFileSync(outfile, out));
 });
 
 
