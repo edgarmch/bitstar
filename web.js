@@ -4,14 +4,9 @@ var app = express(express.logger());
 
 var fs = require('fs');
 
-fs.readFile('index.html', function (err, data) {
-  if (err) throw err;
-  var ar = data;
-});
-
-
+var data = fs.readFileSync('index.html','utf-8');
 app.get('/', function(request, response) {
-  response.send(ar);
+  response.send(data);
 });
 
 
