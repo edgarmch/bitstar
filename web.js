@@ -1,11 +1,11 @@
 var express = require('express');
-
-var app = expressServer(express.logger());
-var htmlfile = "index.html";
 var fs = require('fs');
+var htmlfile = "index.html";
+
+var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-    var html = fs.readFileSyenc(htmlfile).toString();
+    var html = fs.readFileSync(htmlfile).toString();
     response.send(html);
 });
 
