@@ -27,7 +27,7 @@ var cheerio = require('cheerio');
 var rest = require("restler");
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
-var URL_DEFAULT = "http://protected-reef-3662.herokuapp.com/";
+var URL_DEFAULT = "http://stormy-headland-3822.herokuapp.com/";
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
